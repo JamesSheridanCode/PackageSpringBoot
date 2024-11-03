@@ -20,13 +20,13 @@ pipeline {
                 sh 'mvn package'
             }
         }
-        post{
+    }
+        post {
             success {
-
 
                 archiveArtifacts allowEmptyArchive: true,
                     artifacts: '**/demo*.war'
             }
         }
-    }
+
 }
